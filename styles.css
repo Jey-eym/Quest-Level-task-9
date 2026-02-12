@@ -1,0 +1,191 @@
+/* CSS Variables for Easy Theming */
+:root {
+    --primary-bg: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Dark blue gradient */
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --accent-gold: #ffd700; /* Gold for highlights */
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    --border-radius: 20px;
+    --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+body {
+    background: var(--primary-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    color: var(--text-color);
+    background-image: url('https://wallpaperaccess.com/full/4356855.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container for centering */
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* Progress Bar (Added for Quest Feel) */
+.progress-container {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    background-color: var(--accent-gold);
+    transition: width 0.5s ease;
+}
+
+/* Card Styles */
+.card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 2px solid transparent;
+    background: var(--card-bg);
+    transition: var(--transition);
+    animation: fadeIn 0.8s ease-in-out; /* Fade-in animation */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    border-color: var(--accent-gold); /* Glowing gold border */
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    transition: var(--transition);
+    margin: 0.25rem;
+    position: relative;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+.btn-danger {
+    background-color: var(--error-color);
+    border-color: var(--error-color);
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+/* Icons (Using Bootstrap Icons) */
+.btn i {
+    margin-right: 0.5rem;
+}
+
+/* Level-Specific Styles */
+#level, #badge {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--accent-gold);
+}
+
+#badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: var(--accent-gold);
+    color: #000;
+}
+
+#message p, #result p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#coinCount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-gold);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn-success:hover {
+    animation: pulse 0.6s infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.5rem;
+    }
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    .progress {
+        height: 8px;
+    }
+}
+
+/* Accessibility */
+.btn:focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+.card-title {
+    color: var(--text-color);
+}

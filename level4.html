@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 4 - Form Validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="level4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress">
+                <div class="progress-bar" style="width: 66.67%"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Level 4: Form Validation</h5>
+                <input type="text" id="nameInput" class="form-control mb-2" placeholder="Enter your name" aria-label="Name input">
+                <button class="btn btn-primary" onclick="validateName()"><i class="bi bi-check-circle"></i>Submit</button>
+                <div id="message" class="mt-2" role="alert"></div>
+                <br>
+                <a href="level3.html" class="btn btn-secondary"><i class="bi bi-arrow-left"></i>Back</a>
+                <a href="level5.html" class="btn btn-primary">Next<i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
