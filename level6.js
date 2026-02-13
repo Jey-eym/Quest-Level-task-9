@@ -8,7 +8,7 @@ const correctDoor = Math.floor(Math.random() * 3) + 1;
             } else {
                 resultDiv.innerHTML = '<p class="text-danger"><i class="bi bi-x-circle"></i>Error: Wrong door! Try again.</p>';
             }
-            // Add fade-in effect
+       
             resultDiv.style.opacity = '0';
             setTimeout(() => { resultDiv.style.opacity = '1'; }, 100);
             console.log(`Door chosen: ${door}, Correct: ${correctDoor}`);
